@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Worker_APP
 {
-   public abstract class Worker:IGoVacation,IBreakTime
+   public abstract class Worker:IVacation,IBreakTime
     {
         public Worker(int id, string name, string surname, int age, double salary)
         {
@@ -25,7 +25,7 @@ namespace Worker_APP
         public abstract void BreakTime();
        
 
-        public abstract void GoVacation();
+        public abstract void Vacation();
        
     }
 }

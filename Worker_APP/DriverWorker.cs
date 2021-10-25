@@ -23,7 +23,7 @@ namespace Worker_APP
             Console.WriteLine("one to two o'clock");
         }
 
-        public override void GoVacation()
+        public override void Vacation()
         {
             Console.WriteLine("for a one month");
         }
