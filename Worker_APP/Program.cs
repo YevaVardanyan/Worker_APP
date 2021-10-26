@@ -15,7 +15,7 @@ namespace Worker_APP
             {
                 WorkerService workerService = new WorkerService();
             
-                List<Worker> workers = new List<Worker>();
+                List<Worker> workers = new List<Worker>(-11);
                 workers.Add(new DriverWorker(45, "aaa", "aaaaaa", 78, 400));
                 workers.Add(new DriverWorker(75, "bbb", "bbbbbb", 78, 400));
                 workers.Add(new OfficeWorker(25, "ccc", "cccccc", 78, 400));
@@ -29,6 +29,13 @@ namespace Worker_APP
                 workers[0].Vacation();
                 workers[3].BreakTime();
                 workers[3].Vacation();
+                Console.WriteLine("----------");
+                workerService.Delete(workers, 75);
+                workerService.Print(workers);
+                Console.WriteLine("________________");
+                workerService.Update(workers, new OfficeWorker(25, "kkk", "kkkk", 28, 500));
+                workerService.Print(workers);
+               
 
             }
             catch (DivideByZeroException ex)
@@ -50,6 +57,7 @@ namespace Worker_APP
                 Console.WriteLine("Error");
                 string log = logger.CreateLog(ex);
                 logger.Log(log);
+                
             }
         }
     }

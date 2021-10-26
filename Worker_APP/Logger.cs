@@ -14,6 +14,7 @@ namespace Worker_APP
         {
             StringBuilder builder = new StringBuilder();
             builder.AppendLine("--------------------");
+            builder.AppendLine(DateTime.Now.ToString());
             builder.AppendLine(ex.Message);
             builder.Append(ex.Source);
             builder.Append(ex.StackTrace);
@@ -29,7 +30,8 @@ namespace Worker_APP
             path = Path.Combine(new string[] { path, "logs.text" });
             if (!File.Exists(path))
                 File.Create(path);
-            File.WriteAllText(path, source);
+            File.AppendAllText(path, source);
+           
 
            
         }

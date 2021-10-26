@@ -43,7 +43,45 @@ namespace Worker_APP
             }
             return worker;
         }
-       
+       public void Delete (List<Worker> workers , int id)
+        {
+            for (int i = 0; i < workers.Count; i++)
+            {
+                if (workers[i]._id==id)
+                {
+                  workers.Remove(workers[i]);
+                }
+            }
+            
+        }
+        public Worker Get(List<Worker> workers , int id)
+        {
+            Worker worker = null;
+            for (int i = 0; i < workers.Count; i++)
+            {
+                if (workers[i]._id==id)
+                {
+                    worker = workers[i];
+                    break;
+                }
+            }
+            return worker;
+        }
+        public void Update(List<Worker> workers, Worker worker)
+        {
+            Worker wrongworker = null;
+            for (int i = 0; i < workers.Count; i++)
+            {
+                if (workers[i]._id==worker._id)
+                {
+                    wrongworker = workers[i];
+                    int wrongWorkerIdx = workers.IndexOf(wrongworker);
+                    workers[wrongWorkerIdx] = worker;
+                    break;
+                }
+               
+            }
+        }
        
     }
 }
