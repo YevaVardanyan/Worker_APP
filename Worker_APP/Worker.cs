@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Worker_APP
 {
@@ -21,11 +17,8 @@ namespace Worker_APP
         public abstract string _surname { get; set; }
         public abstract int _age { get; set; }
         public abstract double _salary { get; set; }
-
         public abstract void BreakTime();
-       
 
         public abstract void Vacation();
-       
     }
 }

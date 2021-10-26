@@ -20,7 +20,6 @@ namespace Worker_APP
             builder.Append(ex.StackTrace);
             return builder.ToString();
         }
-
         public void Log(string source)
         {
             string path = Directory.GetCurrentDirectory();
@@ -31,9 +30,6 @@ namespace Worker_APP
             if (!File.Exists(path))
                 File.Create(path);
             File.AppendAllText(path, source);
-           
-
-           
         }
     }
 }

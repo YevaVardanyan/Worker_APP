@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Worker_APP
 {
@@ -21,7 +18,6 @@ namespace Worker_APP
             }
             return worker;
         }
-       
         public void Print(List<Worker> workers)
         {
             foreach (var item in workers)
@@ -52,7 +48,6 @@ namespace Worker_APP
                   workers.Remove(workers[i]);
                 }
             }
-            
         }
         public Worker Get(List<Worker> workers , int id)
         {
@@ -79,9 +74,7 @@ namespace Worker_APP
                     workers[wrongWorkerIdx] = worker;
                     break;
                 }
-               
             }
         }
-       
     }
 }

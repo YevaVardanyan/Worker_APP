@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Worker_APP
 {
@@ -16,12 +12,10 @@ namespace Worker_APP
         public override string _surname { get ; set ; }
         public override int _age { get ; set; }
         public override double _salary { get ; set; }
-
         public override void BreakTime()
         {
             Console.WriteLine("two to three o'clock");
         }
-
         public override void Vacation()
         {
             Console.WriteLine("for a two month");

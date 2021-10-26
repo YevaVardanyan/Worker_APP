@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Worker_APP
 {
@@ -10,17 +7,13 @@ namespace Worker_APP
     {
         public void Vacation();
     }
-
- 
     public interface IPrint
     {
         public void Print(List<Worker> workers);
-       
     }
     public interface ISearch
     {
         public string Search(List<Worker>workers, string name);
-       
     }
     public interface IBreakTime
     {
@@ -30,5 +23,4 @@ namespace Worker_APP
     {
         public bool Addbonus(List<Worker> workers , string name );
     }
-   
 }
